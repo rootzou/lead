@@ -1,0 +1,97 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Section de message d'erreur */
+.error-message {
+    max-width: 500px;
+    padding: 20px;
+}
+
+.error-message h1 {
+    font-size: 8rem;
+    font-weight: 600;
+    color: #ff4b5c;
+    margin: 0;
+}
+
+.error-message h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.error-message p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 20px 0;
+}
+
+/* Bouton de retour */
+.btn-home {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #e63b4d;
+}
+
+/* Illustration */
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .error-message h1 {
+        font-size: 6rem;
+    }
+
+    .error-message h2 {
+        font-size: 1.5rem;
+    }
+
+    .error-message p {
+        font-size: 1rem;
+    }
+
+    .btn-home {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
