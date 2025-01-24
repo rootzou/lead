@@ -13,7 +13,8 @@ class Admin extends CI_Controller {
 
     public function index(){
         is_logged_in();
-        $this->load->view('admin/index');
+        $data['title'] = 'Dashboard';
+        $this->load->view('admin/index',$data);
     }
 
     public function save_block() {

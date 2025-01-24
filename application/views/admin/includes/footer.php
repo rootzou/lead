@@ -282,5 +282,7 @@
         fillColor: "rgba(255, 165, 52, .14)",
       });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
   </body>
 </html>

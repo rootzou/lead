@@ -45,6 +45,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('admin/blocks'); ?>">
+                            <i class="fas fa-th-large"></i>
+                            <p>Gestion des Blocs</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('admin/auth/logout'); ?>">
                             <i class="fas fa-sign-out-alt"></i> Déconnexion
                         </a>

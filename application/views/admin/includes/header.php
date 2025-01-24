@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>Admin Lead - <?=$title?></title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="<?=base_url('assets_admin/css/bootstrap.min.css')?>" />
     <link rel="stylesheet" href="<?=base_url('assets_admin/css/plugins.min.css')?>" />
     <link rel="stylesheet" href="<?=base_url('assets_admin/css/kaiadmin.min.css')?>" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="<?=base_url('assets_admin/css/demo.css')?>" />
@@ -111,6 +112,14 @@
                 <a href="<?=base_url('admin/pageslead')?>">
                   <i class="fas fa-file"></i>
                   <p>Pages Leads</p>
+                  <!-- <span class="caret"></span> -->
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?=base_url('admin/blocks')?>">
+                  <i class="fas fa-file"></i>
+                  <p>Blocs</p>
                   <!-- <span class="caret"></span> -->
                 </a>
               </li>

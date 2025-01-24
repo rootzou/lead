@@ -56,23 +56,8 @@
                                 <small class="text-muted">Laissez vide pour conserver l'image actuelle</small>
                             </div>
 
-                            <?php for($i = 1; $i <= 5; $i++): ?>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Titre Bloc <?php echo $i; ?></label>
-                                        <input type="text" class="form-control" name="bloc<?php echo $i; ?>_titre" 
-                                               value="<?php echo set_value('bloc'.$i.'_titre', $page->{'bloc'.$i.'_titre'}); ?>" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Contenu Bloc <?php echo $i; ?></label>
-                                        <textarea class="form-control summernote" name="bloc<?php echo $i; ?>_contenu" rows="4" required><?php 
-                                            echo set_value('bloc'.$i.'_contenu', $page->{'bloc'.$i.'_contenu'}); 
-                                        ?></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php endfor; ?>
+                            
+
 
                             <div class="card-action">
                                 <button type="submit" class="btn btn-success">Mettre à jour</button>

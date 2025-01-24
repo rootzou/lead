@@ -1,25 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-// Routes pour About Us (gestion de la casse)
-$route['AboutUs'] = 'aboutus';
-$route['AboutUs/index'] = 'aboutus/index';
-$route['AboutUs/get_content'] = 'aboutus/get_content';
-$route['AboutUs/update_content'] = 'aboutus/update_content';
-
-// Routes normales
-$route['aboutus'] = 'aboutus';
-$route['aboutus/index'] = 'aboutus/index';
-$route['aboutus/get_content'] = 'aboutus/get_content';
-$route['aboutus/update_content'] = 'aboutus/update_content';
-
-// Routes pour les blocs
-$route['blocks/get_all'] = 'blocks/get_all';
-$route['blocks/add'] = 'blocks/add';
-$route['blocks/update_order'] = 'blocks/update_order';
-$route['blocks/toggle_visibility'] = 'blocks/toggle_visibility';
-$route['blocks/delete'] = 'blocks/delete';
-
 // Routes pour Statistics
 $route['statistics/get_content'] = 'statistics/get_content';
 $route['statistics/update_content'] = 'statistics/update_content';
@@ -65,6 +45,11 @@ $route['admin/pageslead/get_pages_lead_new'] = 'PageLeads/get_pages_lead_new';
 // // Route publique pour afficher une page lead
 $route['page/(:any)'] = 'PageLeads/view/$1';
 
+// Routes pour les blocks
+$route['admin/blocks'] = 'blocks/index';
+$route['admin/blocks/add'] = 'blocks/add';
+$route['admin/blocks/edit/(:num)'] = 'blocks/edit/$1';
+$route['admin/blocks/delete/(:num)'] = 'blocks/delete/$1';
 
 $route['services/(:any)'] = 'Directories/getbyservice/$1';
 $route['default_controller'] = 'Home';

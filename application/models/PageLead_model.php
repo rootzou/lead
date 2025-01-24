@@ -47,7 +47,8 @@ class PageLead_model extends CI_Model {
 
     public function create($data) {
         $data['created_at'] = date('Y-m-d H:i:s');
-        return $this->db->insert($this->table, $data);
+        $this->db->insert($this->table, $data);
+        return $this->db->insert_id();
     }
 
     public function update($id, $data) {
@@ -57,7 +58,30 @@ class PageLead_model extends CI_Model {
     }
 
     public function delete($id) {
+        // First delete associated blocks
+        $this->db->where('page_lead_id', $id);
+        $this->db->delete('bloc_pages_lead');
+
+        // Then delete the page lead
         $this->db->where('id', $id);
+        $this->db->limit(1);
         return $this->db->delete($this->table);
+    }
+
+    public function insert_block($data) {
+        return $this->db->insert('bloc_pages_lead', $data);
+    }
+
+    public function update_block($id, $data) {
+        $this->db->where('id', $id);
+        return $this->db->update('bloc_pages_lead', $data);
+    }
+
+    public function delete_block($id) {
+        $this->db->where('id', $id);
+        return $this->db->delete('bloc_pages_lead');
+    }
+    public function get_blocks($id) {
+        return $this->db->get_where('bloc_pages_lead', ['id' => $id])->row();
     }
 }
